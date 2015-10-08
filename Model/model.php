@@ -31,3 +31,14 @@ function get_all_posts(){
 	close_database_connection($link);	
 	return $posts;	
 }
+function get_post($id){ 
+	$link = open_database_connection();
+	$sql = "SELECT * FROM post WHERE id= '$id'";/*переменная с запросом*/
+	$result = mysql_query($sql,$link); /*выбираем все записи из таблицы*/
+	$posts = array(); /*создаем пустой массив*/
+	while ($row = mysql_fetch_assoc($result)){/*перебираем массив*/
+		$posts[] = $row;
+	}
+	close_database_connection($link);	
+	return $posts;	
+}

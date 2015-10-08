@@ -3,8 +3,8 @@
 		<ol>
 			<?php foreach ($posts as $post): ?>
 				<li>
-					<a href="./index.php?id=<?php echo $post['id']; ?>">
-					<?php echo $post['title'] ." ".$post['content'];?> 
+					<a href="./index.php/show?id=<?php echo $post['id']; ?>">
+					<?php echo $post['title'] /*." ".$post['content']*/;?> 
 					</a>
 				</li>
 			<?php endforeach; ?>
