@@ -1,17 +1,19 @@
 <?php ob_start();?>
-<h2><?php echo $post['title'] ;?> </h2>
+<a href="/Tsekhovaya/index.php">На главную страницу</a>
+<p></p>
+<p></p>
+
+<h2><?php echo $post['title']; ?> </h2>
 <div>
-	Дата:<?php echo $post['date'] ;?> 
+	Дата:<?php echo $post['date']; ?> 	
+</div>
+<div>
+	Автор:<?php echo $post['autor']; ?> 
 	
 </div>
 <div>
-	Автор:<?php echo $post['autor'] ;?> 
-	
+	Текст:<?php echo $post['content']; ?>	
 </div>
-<div>
-	Текст:<?php echo $post['content'];?> 
 	
-</div>
-		
 		<?php $content = ob_get_clean(); ?>
-		
+		<?php include "View/Templates/layout.php"; ?>
